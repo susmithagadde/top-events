@@ -1,0 +1,86 @@
+.inFoMainContainer {
+  display: flex;
+}
+.backArrow {
+  color: white;
+  text-align: right;
+  margin: 20px 0 0 40px;
+  padding: 10px;
+  height: fit-content;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+.eventInfoContainer {
+  color: #fff;
+  max-width: 65%;
+  width: 100%;
+  margin: 20px auto;
+  background-color: #000;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventDetailsSection {
+  padding: 10px;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .eventTime {
+    font-size: 30px;
+  }
+  div {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:first-child,
+    &:last-child {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+    &:first-child {
+      text-align: right;
+    }
+    &:last-child {
+      text-align: left;
+    }
+  }
+}
+
+.league {
+  border-bottom: 1px solid #3b3b3b;
+}
+
+.league,
+.eventDate {
+  padding: 10px;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventDate {
+  border-top: 1px solid #3b3b3b;
+  color: darkgray;
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .eventInfoContainer {
+    max-width: 90%;
+  }
+  .inFoMainContainer {
+    flex-direction: column;
+  }
+  .backArrow {
+    text-align: center;
+    width: 50px;
+  }
+}
